@@ -1,7 +1,7 @@
 class SecondController < UIViewController
   def initWithNibName(name, bundle: bundle)
     super
-    customize
+    add_elements
     self
   end
 
@@ -9,11 +9,13 @@ class SecondController < UIViewController
     super
   end
 
-  def customize
+  def add_elements
 
-    # Set the main attributes
+    # Set views title in the navigationBar
 
     self.title = "Second"
+
+    # Set the window background color
 
     view.backgroundColor = UIColor.yellowColor 
   end
