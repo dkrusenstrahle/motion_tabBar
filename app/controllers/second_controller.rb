@@ -14,6 +14,7 @@ class SecondController < UIViewController
     # Set the main attributes
 
     self.title = "Second"
+
     view.backgroundColor = UIColor.yellowColor 
 
     # Create tabBar images and style tabs
@@ -23,7 +24,10 @@ class SecondController < UIViewController
 
     # Style the tabBarItem
 
+    verticalOffset = UIOffset.new(0, -4)
+
     self.tabBarItem = UITabBarItem.alloc.initWithTitle('Second', image: nil, tag: 0)
-    self.tabBarItem.setFinishedSelectedImage(tabSelected, withFinishedUnselectedImage: tabNormal) 
+    self.tabBarItem.setFinishedSelectedImage(tabSelected, withFinishedUnselectedImage: tabNormal)  
+    self.tabBarItem.setTitlePositionAdjustment(verticalOffset)
   end
 end

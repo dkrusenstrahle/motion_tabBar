@@ -14,6 +14,7 @@ class FirstController < UIViewController
     # Set the main attributes
 
     self.title = "First"
+    
     view.backgroundColor = UIColor.whiteColor 
 
     # Create tabBar images and style tabs
