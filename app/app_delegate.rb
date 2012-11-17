@@ -7,8 +7,22 @@ class AppDelegate
 
     # Create the main controllers
 
+    verticalOffset = UIOffset.new(0, -4)
+
+    tabNormal = UIImage.imageNamed('tabbar-activity-selected.png')
+    tabSelected = UIImage.imageNamed('tabbar-activity-selected.png')
+
+    # Style the tabBarItem
+
     firstViewController = FirstController.alloc.initWithNibName(nil, bundle: nil)
+    firstViewController.tabBarItem = UITabBarItem.alloc.initWithTitle('First', image: nil, tag: 0)
+    firstViewController.tabBarItem.setFinishedSelectedImage(tabSelected, withFinishedUnselectedImage: tabNormal)  
+    firstViewController.tabBarItem.setTitlePositionAdjustment(verticalOffset)
+
     secondViewController = SecondController.alloc.initWithNibName(nil, bundle: nil)
+    secondViewController.tabBarItem = UITabBarItem.alloc.initWithTitle('Second', image: nil, tag: 0)
+    secondViewController.tabBarItem.setFinishedSelectedImage(tabSelected, withFinishedUnselectedImage: tabNormal)  
+    secondViewController.tabBarItem.setTitlePositionAdjustment(verticalOffset)
 
     # Create and style the tabBar controller
 
